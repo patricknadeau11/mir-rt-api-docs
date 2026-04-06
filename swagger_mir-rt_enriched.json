@@ -506,7 +506,7 @@
             }
           }
         },
-        "description": "Get a specific claim item.",
+        "description": "Retourne les détails d'un article de réclamation spécifique.",
         "operationId": "get_specific_claim_items_/claims/claim-items/<int:claim_item_id>",
         "parameters": [
           {
@@ -544,7 +544,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/claims/claim-items/{claimItemId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un article de réclamation"
       }
     },
     "/claims/{claimId}": {
@@ -812,7 +813,7 @@
             }
           }
         },
-        "description": "Get a specific failure code.",
+        "description": "Retourne les détails d'un code de défaillance spécifique.",
         "operationId": "get_specific_failure_codes_/codes/failure-codes/<int:failure_code_id>",
         "parameters": [
           {
@@ -850,7 +851,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/failure-codes/{failureCodeId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un code de défaillance"
       }
     },
     "/codes/position-codes": {
@@ -974,7 +976,7 @@
             }
           }
         },
-        "description": "Get a specific position code.",
+        "description": "Retourne les détails d'un code de position spécifique.",
         "operationId": "get_specific_position_codes_/codes/position-codes/<int:position_code_id>",
         "parameters": [
           {
@@ -1012,7 +1014,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/position-codes/{positionCodeId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un code de position"
       }
     },
     "/codes/reason-codes": {
@@ -1136,7 +1139,7 @@
             }
           }
         },
-        "description": "Get a specific reason code.",
+        "description": "Retourne les détails d'un code de raison spécifique.",
         "operationId": "get_specific_reason_codes_/codes/reason-codes/<string:reason_code>",
         "parameters": [
           {
@@ -1174,7 +1177,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/reason-codes/{reasonCode}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un code de raison"
       }
     },
     "/codes/repair-codes": {
@@ -1298,7 +1302,7 @@
             }
           }
         },
-        "description": "Get a specific repair code.",
+        "description": "Retourne les détails d'un code de réparation spécifique.",
         "operationId": "get_specific_repair_codes_/codes/repair-codes/<string:repair_code>",
         "parameters": [
           {
@@ -1336,7 +1340,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/repair-codes/{repairCode}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un code de réparation"
       }
     },
     "/codes/work-accomplished-codes": {
@@ -1460,7 +1465,7 @@
             }
           }
         },
-        "description": "Get a specific work accomplished code.",
+        "description": "Retourne les détails d'un code travaux accomplis spécifique.",
         "operationId": "get_specific_work_codes_/codes/work-accomplished-codes/<int:work_accomplished_code_id>",
         "parameters": [
           {
@@ -1498,7 +1503,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-accomplished-codes/{workAccomplishedCodeId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un code travaux accomplis"
       }
     },
     "/codes/work-codes": {
@@ -1614,7 +1620,7 @@
             }
           }
         },
-        "description": "Get a list of work code suggested parts",
+        "description": "Retourne toutes les pièces suggérées associées aux codes de travaux, filtrable par code de travail.",
         "operationId": "get_work_codes_/codes/work-codes-suggested-parts",
         "parameters": [
           {
@@ -1699,7 +1705,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes-suggested-parts\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les pièces suggérées par code de travail"
       }
     },
     "/codes/work-codes-suggested-parts/{workCodeSuggestedPartId}": {
@@ -1732,7 +1739,7 @@
             }
           }
         },
-        "description": "Get a specific work code suggested part entry.",
+        "description": "Retourne les détails d'une pièce suggérée spécifique liée à un code de travail.",
         "operationId": "get_specific_work_code_suggested_parts_/codes/work-codes-suggested-parts/<int:work_code_suggested_part_id>",
         "parameters": [
           {
@@ -1770,7 +1777,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes-suggested-parts/{workCodeSuggestedPartId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une pièce suggérée par code de travail"
       }
     },
     "/codes/work-codes-suggested-tasks": {
@@ -1795,7 +1803,7 @@
             }
           }
         },
-        "description": "Get a list of work code suggested tasks",
+        "description": "Retourne toutes les tâches suggérées associées aux codes de travaux.",
         "operationId": "get_work_codes_suggested_tasks_/codes/work-codes-suggested-tasks",
         "parameters": [
           {
@@ -1870,7 +1878,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes-suggested-tasks\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les tâches suggérées par code de travail"
       }
     },
     "/codes/work-codes-suggested-tasks/{workCodeSuggestedTaskId}": {
@@ -1903,7 +1912,7 @@
             }
           }
         },
-        "description": "Get a specific work code suggested task entry.",
+        "description": "Retourne les détails d'une tâche suggérée spécifique liée à un code de travail.",
         "operationId": "get_specific_work_codes_suggested_tasks_/codes/work-codes-suggested-tasks/<int:work_code_suggested_task_id>",
         "parameters": [
           {
@@ -1941,7 +1950,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes-suggested-tasks/{workCodeSuggestedTaskId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une tâche suggérée par code de travail"
       }
     },
     "/codes/work-codes/{workCodeId}": {
@@ -2046,7 +2056,7 @@
             }
           }
         },
-        "description": "Get a specific work code's suggested parts",
+        "description": "Retourne les pièces suggérées d'un code de travail spécifique.",
         "operationId": "get_specific_work_code_suggested_parts_/codes/work-codes/<int:work_code_id>/work-codes-suggested-parts",
         "parameters": [
           {
@@ -2084,7 +2094,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes/{workCodeId}/work-codes-suggested-parts\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les pièces suggérées d'un code de travail"
       }
     },
     "/codes/work-codes/{workCodeId}/work-codes-suggested-tasks": {
@@ -2117,7 +2128,7 @@
             }
           }
         },
-        "description": "Get a specific work code's suggested tasks.",
+        "description": "Retourne les tâches suggérées d'un code de travail spécifique.",
         "operationId": "get_specific_work_codes_suggested_tasks_/codes/work-codes/<int:work_code_id>/work-codes-suggested-tasks",
         "parameters": [
           {
@@ -2155,7 +2166,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/codes/work-codes/{workCodeId}/work-codes-suggested-tasks\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les tâches suggérées d'un code de travail"
       }
     },
     "/contacts": {
@@ -3086,7 +3098,7 @@
             }
           }
         },
-        "description": "Get a specific custom inspection sheet.",
+        "description": "Retourne les détails d'une fiche d'inspection personnalisée spécifique avec tous ses points d'inspection.",
         "operationId": "get_specific_custom_inspection_sheet_/inspections/custom-inspection-sheets/<int:custom_inspection_sheet_id>",
         "parameters": [
           {
@@ -3124,7 +3136,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/inspections/custom-inspection-sheets/{customInspectionSheetId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une fiche d'inspection personnalisée"
       }
     },
     "/inspections/standard-inspection-sheets": {
@@ -3249,7 +3262,7 @@
             }
           }
         },
-        "description": "Get a specific standard inspection sheet.",
+        "description": "Retourne les détails d'une fiche d'inspection standard spécifique avec tous ses points d'inspection réglementaires.",
         "operationId": "get_specific_standard_inspection_sheet_/inspections/standard-inspection-sheets/<int:standard_inspection_sheet_id>",
         "parameters": [
           {
@@ -3287,7 +3300,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/inspections/standard-inspection-sheets/{standardInspectionSheetId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une fiche d'inspection standard"
       }
     },
     "/inventory-adjustments": {
@@ -3899,7 +3913,7 @@
             }
           }
         },
-        "description": "Get a specific invoice item.",
+        "description": "Retourne les détails d'une ligne de facturation spécifique (pièce ou main-d'œuvre facturée).",
         "operationId": "get_specific_invoice_items_/invoices/invoice-items/<int:invoice_item_id>",
         "parameters": [
           {
@@ -3937,7 +3951,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/invoices/invoice-items/{invoiceItemId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une ligne de facture"
       }
     },
     "/invoices/invoice-status": {
@@ -4061,7 +4076,7 @@
             }
           }
         },
-        "description": "Get a specific invoice status.",
+        "description": "Retourne les détails d'un statut de facture spécifique.",
         "operationId": "get_specific_invoice_status_/invoices/invoice-status/<int:invoice_status_id>",
         "parameters": [
           {
@@ -4099,7 +4114,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/invoices/invoice-status/{invoiceStatusId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un statut de facture"
       }
     },
     "/invoices/invoice-types": {
@@ -4223,7 +4239,7 @@
             }
           }
         },
-        "description": "Get a specific invoice types.",
+        "description": "Retourne les détails d'un type de document de facturation spécifique.",
         "operationId": "get_specific_invoice_type_/invoices/invoice-types/<int:invoice_type_id>",
         "parameters": [
           {
@@ -4261,7 +4277,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/invoices/invoice-types/{invoiceTypeId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un type de facture"
       }
     },
     "/invoices/supplier-invoice/{supplierInvoiceId}": {
@@ -5113,7 +5130,7 @@
             }
           }
         },
-        "description": "Get a specific delay status.",
+        "description": "Retourne les détails d'un statut de délai spécifique.",
         "operationId": "get_specific_delay_status_/job-requests/delay-status/<int:delay_status_id>",
         "parameters": [
           {
@@ -5151,7 +5168,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/delay-status/{delayStatusId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un statut de délai"
       }
     },
     "/job-requests/from-work-code": {
@@ -5546,7 +5564,7 @@
             }
           }
         },
-        "description": "Get a specific job status history entry.",
+        "description": "Retourne les détails d'une entrée spécifique dans l'historique des statuts d'une demande de service.",
         "operationId": "get_specific_job_request_status_history_/job-requests/job-status-history/<int:job_status_history_id>",
         "parameters": [
           {
@@ -5659,7 +5677,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/job-status-history/{jobStatusHistoryId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une entrée d'historique de statut (demande)"
       }
     },
     "/job-requests/job-sub-requests": {
@@ -5953,7 +5972,7 @@
             }
           }
         },
-        "description": "Get a list of job sub request's annexes",
+        "description": "Retourne les pièces jointes associées à une sous-requête spécifique.",
         "operationId": "get_specific_sub_job_annexes_request_/job-requests/job-sub-requests/<int:job_sub_request_id>/job-annexes",
         "parameters": [
           {
@@ -5991,7 +6010,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/job-sub-requests/{jobSubRequestId}/job-annexes\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les annexes d'une sous-requête"
       }
     },
     "/job-requests/job-sub-requests/{jobSubRequestId}/job-status-history": {
@@ -6024,7 +6044,7 @@
             }
           }
         },
-        "description": "Get a list of job status history for a specific sub-request.",
+        "description": "Retourne l'historique des changements de statut d'une sous-requête spécifique.",
         "operationId": "get_specific_sub_request_status_history_/job-requests/job-sub-requests/<int:job_sub_request_id>/job-status-history",
         "parameters": [
           {
@@ -6137,7 +6157,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/job-sub-requests/{jobSubRequestId}/job-status-history\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister l'historique de statuts d'une sous-requête"
       }
     },
     "/job-requests/job-sub-requests/{jobSubRequestId}/job-suggested-parts": {
@@ -6170,7 +6191,7 @@
             }
           }
         },
-        "description": "Get a list of a job sub-request's suggested parts",
+        "description": "Retourne les pièces suggérées associées à une sous-requête spécifique.",
         "operationId": "get_specific_job_sub_request_suggested_parts_/job-requests/job-sub-requests/<int:job_sub_request_id>/job-suggested-parts",
         "parameters": [
           {
@@ -6208,7 +6229,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/job-sub-requests/{jobSubRequestId}/job-suggested-parts\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les pièces suggérées d'une sous-requête"
       }
     },
     "/job-requests/job-sub-requests/{jobSubRequestId}/job-suggested-tasks": {
@@ -6241,7 +6263,7 @@
             }
           }
         },
-        "description": "Get a list of a job sub-request's suggested tasks",
+        "description": "Retourne les tâches suggérées associées à une sous-requête spécifique.",
         "operationId": "get_specific_job_sub_request_suggested_tasks_/job-requests/job-sub-requests/<int:job_sub_request_id>/job-suggested-tasks",
         "parameters": [
           {
@@ -6279,7 +6301,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/job-sub-requests/{jobSubRequestId}/job-suggested-tasks\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les tâches suggérées d'une sous-requête"
       }
     },
     "/job-requests/job-suggested-parts": {
@@ -6625,7 +6648,7 @@
             }
           }
         },
-        "description": "Get a specific operating conditions.",
+        "description": "Retourne les détails d'une condition d'opération spécifique.",
         "operationId": "get_specific_operating_condition_/job-requests/operating-conditions/<int:operating_condition_id>",
         "parameters": [
           {
@@ -6663,7 +6686,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/operating-conditions/{operatingConditionId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une condition d'opération"
       }
     },
     "/job-requests/risks": {
@@ -6787,7 +6811,7 @@
             }
           }
         },
-        "description": "Get a specific risk.",
+        "description": "Retourne les détails d'un niveau de risque spécifique.",
         "operationId": "get_specific_risk_/job-requests/risks/<int:risk_id>",
         "parameters": [
           {
@@ -6825,7 +6849,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/risks/{riskId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un niveau de risque"
       }
     },
     "/job-requests/{jobRequestId}": {
@@ -6930,7 +6955,7 @@
             }
           }
         },
-        "description": "Get a list of a job request's annexes.",
+        "description": "Retourne les pièces jointes (photos, documents) associées à une demande de service spécifique.",
         "operationId": "get_specific_job_annexes_request_/job-requests/<int:job_request_id>/job-annexes",
         "parameters": [
           {
@@ -6968,7 +6993,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/{jobRequestId}/job-annexes\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les annexes d'une demande de service"
       }
     },
     "/job-requests/{jobRequestId}/job-status-history": {
@@ -7001,7 +7027,7 @@
             }
           }
         },
-        "description": "Get a list of job status history for a specific job request.",
+        "description": "Retourne l'historique des changements de statut d'une demande de service spécifique.",
         "operationId": "get_specific_job_request_status_history_/job-requests/<int:job_request_id>/job-status-history",
         "parameters": [
           {
@@ -7114,7 +7140,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/{jobRequestId}/job-status-history\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister l'historique de statuts d'une demande"
       }
     },
     "/job-requests/{jobRequestId}/job-sub-requests": {
@@ -7239,7 +7266,7 @@
             }
           }
         },
-        "description": "Get a list of a job request's suggested parts.",
+        "description": "Retourne les pièces suggérées pour une demande de service spécifique selon son code de travail.",
         "operationId": "get_specific_job_request_suggested_parts_/job-requests/<int:job_request_id>/job-suggested-parts",
         "parameters": [
           {
@@ -7277,7 +7304,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/{jobRequestId}/job-suggested-parts\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les pièces suggérées d'une demande"
       }
     },
     "/job-requests/{jobRequestId}/job-suggested-tasks": {
@@ -7310,7 +7338,7 @@
             }
           }
         },
-        "description": "Get a list of a job request's suggested tasks",
+        "description": "Retourne les tâches suggérées pour une demande de service spécifique selon son code de travail.",
         "operationId": "get_specific_job_request_suggested_tasks_/job-requests/<int:job_request_id>/job-suggested-tasks",
         "parameters": [
           {
@@ -7348,7 +7376,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/job-requests/{jobRequestId}/job-suggested-tasks\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les tâches suggérées d'une demande"
       }
     },
     "/meters": {
@@ -8057,7 +8086,7 @@
             }
           }
         },
-        "description": "Get a list of part categories.",
+        "description": "Retourne les détails d'une catégorie de pièce spécifique.",
         "operationId": "get_part_specific_category_/parts/part-categories/<int:part_category_id>",
         "parameters": [
           {
@@ -8095,7 +8124,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/parts/part-categories/{partCategoryId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une catégorie de pièce"
       }
     },
     "/parts/part-serial-number-status": {
@@ -8120,7 +8150,7 @@
             }
           }
         },
-        "description": "Get a list of part serial number status.",
+        "description": "Retourne les statuts possibles pour les numéros de série de pièces (ex. : En service, Retiré, En réparation).",
         "operationId": "get_part_serial_number_statuses_/parts/part-serial-number-status",
         "parameters": [
           {
@@ -8185,7 +8215,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/parts/part-serial-number-status\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les statuts de numéros de série"
       }
     },
     "/parts/part-serial-number-status/{partSerialNumberStatusId}": {
@@ -8218,7 +8249,7 @@
             }
           }
         },
-        "description": "Get a specific part serial numbers status.",
+        "description": "Retourne les détails d'un statut de numéro de série spécifique.",
         "operationId": "get_part_specific_serial_number_status_/parts/part-serial-number-status/<int:part_serial_number_status_id>",
         "parameters": [
           {
@@ -8256,7 +8287,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/parts/part-serial-number-status/{partSerialNumberStatusId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un statut de numéro de série"
       }
     },
     "/parts/part-serial-numbers": {
@@ -8400,7 +8432,7 @@
             }
           }
         },
-        "description": "Get a specific part serial number.",
+        "description": "Retourne les détails d'un numéro de série de pièce spécifique avec son historique d'installation.",
         "operationId": "get_specific_part_serial_numbers_/parts/part-serial-numbers/<int:part_serial_number_id>",
         "parameters": [
           {
@@ -8438,7 +8470,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/parts/part-serial-numbers/{partSerialNumberId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un numéro de série de pièce"
       }
     },
     "/parts/{partId}": {
@@ -10910,7 +10943,7 @@
             }
           }
         },
-        "description": "Get a list of supplier categories.",
+        "description": "Retourne les catégories de fournisseurs configurées dans MIR-RT (ex. : Pièces, Services, Pneumatiques).",
         "operationId": "get_supplier_categories_/suppliers/supplier-categories",
         "parameters": [
           {
@@ -10976,7 +11009,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/suppliers/supplier-categories\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les catégories de fournisseurs"
       }
     },
     "/suppliers/supplier-categories/{supplierCategoryId}": {
@@ -11009,7 +11043,7 @@
             }
           }
         },
-        "description": "Get a specific supplier category.",
+        "description": "Retourne les détails d'une catégorie de fournisseur spécifique.",
         "operationId": "get_specific_supplier_category_/suppliers/supplier-categories/<int:supplier_category_id>",
         "parameters": [
           {
@@ -11047,7 +11081,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/suppliers/supplier-categories/{supplierCategoryId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une catégorie de fournisseur"
       }
     },
     "/suppliers/supplier-dynamic-specifications": {
@@ -11072,7 +11107,7 @@
             }
           }
         },
-        "description": "Get a list of supplier dynamic specifications and their values.",
+        "description": "Retourne les valeurs des champs personnalisés de tous les fournisseurs.",
         "operationId": "get_dynamic_specifications_/suppliers/supplier-dynamic-specifications",
         "parameters": [
           {
@@ -11148,7 +11183,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/suppliers/supplier-dynamic-specifications\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les spécifications dynamiques des fournisseurs"
       }
     },
     "/suppliers/{supplierId}": {
@@ -11253,7 +11289,7 @@
             }
           }
         },
-        "description": "Get a list of a specific supplier's dynamic specifications and their values.",
+        "description": "Retourne les valeurs des champs personnalisés d'un fournisseur spécifique.",
         "operationId": "get_supplier_dynamic_specifications_/suppliers/<int:supplier_id>/supplier-dynamic-specifications",
         "parameters": [
           {
@@ -11308,7 +11344,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/suppliers/{supplierId}/supplier-dynamic-specifications\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les spécifications dynamiques d'un fournisseur"
       }
     },
     "/suppliers/{supplierId}/supplier-invoices": {
@@ -11797,7 +11834,7 @@
             }
           }
         },
-        "description": "Get a specific tire log.",
+        "description": "Retourne les détails d'un événement spécifique dans le journal d'un pneu (installation, retrait, rotation).",
         "operationId": "get_specific_tire_logs_/tires/tire-logs/<int:tire_log_id>",
         "parameters": [
           {
@@ -11835,7 +11872,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/tires/tire-logs/{tireLogId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un journal de pneu"
       }
     },
     "/tires/{tireId}": {
@@ -12316,7 +12354,7 @@
             }
           }
         },
-        "description": "Get a specific calendar.",
+        "description": "Retourne les détails d'un calendrier d'entretien spécifique.",
         "operationId": "get_specific_calendar_/units/calendars/<int:calendar_id>",
         "parameters": [
           {
@@ -12354,7 +12392,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/calendars/{calendarId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un calendrier d'entretien"
       }
     },
     "/units/maintenance-points": {
@@ -12491,7 +12530,7 @@
             }
           }
         },
-        "description": "Get a specific maintenance point.",
+        "description": "Retourne les détails d'un point de maintenance du référentiel global.",
         "operationId": "get_specific_maintenance_points_/units/maintenance-points/<int:maintenance_point_id>",
         "parameters": [
           {
@@ -12529,7 +12568,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/maintenance-points/{maintenancePointId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un point de maintenance (référentiel)"
       }
     },
     "/units/note": {
@@ -12924,7 +12964,7 @@
             }
           }
         },
-        "description": "Get a specific unit class.",
+        "description": "Retourne les détails d'une classe d'unité spécifique.",
         "operationId": "get_unit_specific_classes_/units/unit-classes/<int:unit_class_id>",
         "parameters": [
           {
@@ -12962,7 +13002,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-classes/{unitClassId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une classe d'unité"
       }
     },
     "/units/unit-code-warranties": {
@@ -13089,7 +13130,7 @@
             }
           }
         },
-        "description": "Get a specific unit code warranty.",
+        "description": "Retourne les détails d'une garantie par code de travail spécifique.",
         "operationId": "get_unit_specific_code_warranties_/units/unit-code-warranties/<int:code_warranty_id>",
         "parameters": [
           {
@@ -13127,7 +13168,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-code-warranties/{codeWarrantyId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une garantie par code de travail"
       }
     },
     "/units/unit-dynamic-specifications": {
@@ -13352,7 +13394,7 @@
             }
           }
         },
-        "description": "Get a specific unit family.",
+        "description": "Retourne les détails d'une famille d'unité spécifique.",
         "operationId": "get_unit_specific_families_/units/unit-families/<int:unit_family_id>",
         "parameters": [
           {
@@ -13390,7 +13432,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-families/{unitFamilyId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une famille d'unité"
       }
     },
     "/units/unit-functional-status-history": {
@@ -13789,7 +13832,7 @@
             }
           }
         },
-        "description": "Get a specific unit layout.",
+        "description": "Retourne les détails d'un gabarit d'essieux spécifique.",
         "operationId": "get_unit_specific_layout_/units/unit-layouts/<int:unit_layout_id>",
         "parameters": [
           {
@@ -13835,7 +13878,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-layouts/{unitLayoutId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un gabarit d'essieux"
       }
     },
     "/units/unit-locations": {
@@ -13959,7 +14003,7 @@
             }
           }
         },
-        "description": "Get a specific unit location.",
+        "description": "Retourne les détails d'une localisation d'unité spécifique.",
         "operationId": "get_unit_specific_location_/units/unit-locations/<int:unit_location_id>",
         "parameters": [
           {
@@ -13997,7 +14041,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-locations/{unitLocationId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une localisation d'unité"
       }
     },
     "/units/unit-maintenance-point-parts": {
@@ -14141,7 +14186,7 @@
             }
           }
         },
-        "description": "Get a specific unit maintenance point part.",
+        "description": "Retourne les détails d'une pièce associée à un point de maintenance spécifique.",
         "operationId": "get_specific_unit_maintenance_point_parts_/units/unit-maintenance-point-parts/<int:unit_maintenance_point_part_id>",
         "parameters": [
           {
@@ -14179,7 +14224,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-maintenance-point-parts/{unitMaintenancePointPartId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une pièce d'un point de maintenance"
       }
     },
     "/units/unit-maintenance-points": {
@@ -14336,7 +14382,7 @@
             }
           }
         },
-        "description": "Get a specific unit maintenance point.",
+        "description": "Retourne les détails d'un point de maintenance d'unité spécifique avec sa fréquence et son dernier entretien.",
         "operationId": "get_specific_unit_maintenance_points_/units/unit-maintenance-points/<int:unit_maintenance_point_id>",
         "parameters": [
           {
@@ -14374,7 +14420,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-maintenance-points/{unitMaintenancePointId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un point de maintenance d'unité"
       }
     },
     "/units/unit-makes": {
@@ -15328,7 +15375,7 @@
             }
           }
         },
-        "description": "Get a specific unit status.",
+        "description": "Retourne les détails d'un statut d'unité spécifique.",
         "operationId": "get_unit_specific_status_/units/unit-status/<int:unit_status_id>",
         "parameters": [
           {
@@ -15366,7 +15413,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-status/{unitStatusId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un statut d'unité"
       }
     },
     "/units/unit-types": {
@@ -15586,7 +15634,7 @@
             }
           }
         },
-        "description": "Get a specific unit type.",
+        "description": "Retourne les détails d'un type d'unité spécifique.",
         "operationId": "get_unit_specific_types_/units/unit-types/<int:unit_type_id>",
         "parameters": [
           {
@@ -15624,7 +15672,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/unit-types/{unitTypeId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir un type d'unité"
       }
     },
     "/units/{unitId}": {
@@ -15729,7 +15778,7 @@
             }
           }
         },
-        "description": "Get a specific unit's attributes.",
+        "description": "Retourne les attributs supplémentaires configurés pour une unité spécifique.",
         "operationId": "get_unit_attributes_/units/<int:unit_id>/unit-attributes",
         "parameters": [
           {
@@ -15767,7 +15816,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-attributes\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les attributs d'une unité"
       }
     },
     "/units/{unitId}/unit-code-warranties": {
@@ -15800,7 +15850,7 @@
             }
           }
         },
-        "description": "Get a specific unit's code warranties.",
+        "description": "Retourne les garanties associées à des codes de travaux spécifiques pour une unité.",
         "operationId": "get_specific_unit_code_warranties_/units/<int:unit_id>/unit-code-warranties",
         "parameters": [
           {
@@ -15838,7 +15888,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-code-warranties\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les garanties par code de travail d'une unité"
       }
     },
     "/units/{unitId}/unit-dynamic-specifications": {
@@ -15871,7 +15922,7 @@
             }
           }
         },
-        "description": "Get specific unit's dynamic specifications and their values. \r\n Dynamic specifications.  SpecificationValue is a polymorphic object, and can be of the following types: \r\n - Boolean specification value \r\n - Integer specification value\r\n - String specification value\r\n - Number specification value\r\n - Dropdown specification value",
+        "description": "Retourne les valeurs des champs personnalisés d'une unité spécifique.",
         "operationId": "get_specific_unit_dynamic_specification_/units/<int:unit_id>/unit-dynamic-specifications",
         "parameters": [
           {
@@ -15926,7 +15977,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-dynamic-specifications\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les spécifications dynamiques d'une unité"
       }
     },
     "/units/{unitId}/unit-functional-status-history": {
@@ -15959,7 +16011,7 @@
             }
           }
         },
-        "description": "Get a specific unit's functional status history.",
+        "description": "Retourne l'historique des changements d'état fonctionnel (en service / hors service) d'une unité spécifique.",
         "operationId": "get_specific_unit_functional_status_/units/<int:unit_id>/unit-functional-status-history",
         "parameters": [
           {
@@ -16032,7 +16084,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-functional-status-history\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister l'historique fonctionnel d'une unité"
       }
     },
     "/units/{unitId}/unit-general-warranties": {
@@ -16065,7 +16118,7 @@
             }
           }
         },
-        "description": "Get a specific unit's general warranties.",
+        "description": "Retourne les garanties générales (constructeur ou acheteur) d'une unité spécifique.",
         "operationId": "get_specific_unit_general_warranties_/units/<int:unit_id>/unit-general-warranties",
         "parameters": [
           {
@@ -16103,7 +16156,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-general-warranties\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les garanties générales d'une unité"
       }
     },
     "/units/{unitId}/unit-installed-parts-warranties": {
@@ -16136,7 +16190,7 @@
             }
           }
         },
-        "description": "Get a specific unit's installed parts with warranties.",
+        "description": "Retourne les garanties sur les pièces installées sur une unité spécifique.",
         "operationId": "get_specific_unit_installed_parts_warranties_/units/<int:unit_id>/unit-installed-parts-warranties",
         "parameters": [
           {
@@ -16174,7 +16228,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-installed-parts-warranties\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les garanties sur pièces installées d'une unité"
       }
     },
     "/units/{unitId}/unit-notes": {
@@ -16207,7 +16262,7 @@
             }
           }
         },
-        "description": "Get a specific unit's notes.",
+        "description": "Retourne toutes les notes du journal de bord d'une unité spécifique.",
         "operationId": "get_specific_unit_note_/units/<int:unit_id>/unit-notes",
         "parameters": [
           {
@@ -16306,7 +16361,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/units/{unitId}/unit-notes\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Lister les notes d'une unité"
       }
     },
     "/users": {
@@ -16551,7 +16607,7 @@
             }
           }
         },
-        "description": "Get a specific specialization.",
+        "description": "Retourne les détails d'une spécialisation de technicien spécifique.",
         "operationId": "get_specific_specialization_/users/specializations/<int:specialization_id>",
         "parameters": [
           {
@@ -16589,7 +16645,8 @@
             "label": "C# (HttpClient)",
             "source": "using System.Net.Http;\nusing System.Text;\nusing System.Text.Json;\n\nusing var client = new HttpClient();\n        client.DefaultRequestHeaders.Add(\"authToken\", \"votre-auth-token\");\n\n        var response = await client.GetAsync(\"https://api.mir-rt.com/api/v1/users/specializations/{specializationId}\");\nresponse.EnsureSuccessStatusCode();\nvar body = await response.Content.ReadAsStringAsync();\nConsole.WriteLine(body);"
           }
-        ]
+        ],
+        "summary": "Obtenir une spécialisation"
       }
     },
     "/users/{userId}": {
@@ -18811,8 +18868,9 @@
       "url": "https://mir-solutions.com"
     },
     "x-logo": {
-      "url": "https://mir-solutions.com/wp-content/uploads/2021/01/MIR-RT-logo.png",
-      "altText": "MIR-RT Logo"
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1ODAgMTUwIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjE1MCI+CiAgPCEtLSAzIGJhcnJlcyBub2lyZXMgZ2F1Y2hlIGzDqWfDqHJlbWVudCBpbmNsaW7DqWVzIC0tPgogIDxnIGZpbGw9IiMxMTExMTEiIHRyYW5zZm9ybT0ic2tld1goLTcpIj4KICAgIDxyZWN0IHg9IjgiICB5PSIxMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEyNiIgcng9IjIiLz4KICAgIDxyZWN0IHg9IjM4IiB5PSIxMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEyNiIgcng9IjIiLz4KICAgIDxyZWN0IHg9IjY4IiB5PSIxMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEyNiIgcng9IjIiLz4KICA8L2c+CgogIDwhLS0gVGV4dGUgcHJpbmNpcGFsIE1pUi1SVCByb3VnZSBpdGFsaWMgYm9sZCAtLT4KICA8dGV4dAogICAgeD0iMTA1IiB5PSIxMjgiCiAgICBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssICdGcmFua2xpbiBHb3RoaWMgSGVhdnknLCBJbXBhY3QsIHNhbnMtc2VyaWYiCiAgICBmb250LXNpemU9IjExNSIKICAgIGZvbnQtd2VpZ2h0PSI5MDAiCiAgICBmb250LXN0eWxlPSJpdGFsaWMiCiAgICBmaWxsPSIjQzAxMTFBIgogICAgbGV0dGVyLXNwYWNpbmc9IjEiPk1pUi1SVDwvdGV4dD4KCiAgPCEtLSBMb3NhbmdlIG5vaXIgc3VyIGxlIHBvaW50IGR1IGkgKHBvc2l0aW9uIGFwcHJveGltYXRpdmUpIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMjI4LDEwICAyNDQsMjYgIDIyOCw0MiAgMjEyLDI2IiBmaWxsPSIjMTExMTExIi8+Cjwvc3ZnPgo=",
+      "altText": "MIR-RT Logo",
+      "backgroundColor": "#FFFFFF"
     }
   },
   "produces": [
